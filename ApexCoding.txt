@@ -43,7 +43,9 @@ Naming Convention
         Test Classes: A test class should be suffixed by 'Text'. e.g. DebitAccountTest, CreditAccountTest
 
   Interfaces:
-     Interface names follow the same rules as Classes. e.g. Recipe, Coupon
+     Interface names follow the same rules as Classes and be prefaced with a capital I e.g. IRecipe, ICoupon.  Where the
+     interface is describing the ability to be used in a certain way the interface name should be an adjective and end
+     with the suffix ible or able e.g. IBatchable
 
   
   Variables: 
