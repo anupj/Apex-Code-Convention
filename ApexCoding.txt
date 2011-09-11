@@ -32,8 +32,11 @@ Naming Convention
      There a few recommended variations for different types of classes
         Batch Apex Class: The class name should be suffixed by 'Batch'. e.g. AccountRefundBatch, ValidateOpportunityBatch
         Controller: The class name is typically suffixed by 'Controller' e.g. SolarEnergyController, NewAccountController
-        Trigger: If you follow the Trigger pattern, then the main sObject trigger name should be suffixed by 'Trigger',
-                 and the handler Class should be suffixed by 'TriggerHandler' e.g. AccountTrigger, AccountTriggerHandler
+        Trigger: If you follow the new Trigger 'proto-pattern'[http://bit.ly/cX6VK7], then the main sObject trigger name 
+                 should be suffixed by 'Trigger', and the handler Class should be suffixed by 'TriggerHandler' 
+                 e.g. AccountTrigger, AccountTriggerHandler
+                 Remember there are more than one Trigger proto-patterns out there[http://bit.ly/owlIZu].
+                 Amend your coding style according to the pattern selected.
         Test Classes: A test class should be suffixed by 'Text'. e.g. DebitAccountTest, CreditAccountTest
 
   Interfaces:
@@ -57,7 +60,7 @@ Naming Convention
      word capitalized.
 
   Documents:
-     You should follow the following naming pattern for Documents.
+     You should follow the following naming proto-pattern for Documents.
      'Project Name - Title of Document - Document Order - Version'
 
 
