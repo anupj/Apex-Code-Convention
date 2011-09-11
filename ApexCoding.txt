@@ -10,30 +10,33 @@ To learn more about Apex, read the developer documentation on the Force.com deve
 [http://www.salesforce.com/us/developer/docs/apexcode/index.htm]
 
 Unfortunately, there is no official coding convention defined by Salesforce.com which the developers can follow to 
-create Force.com applications. This has led to developers using random coding style. If the developer has a previous experience
-in another language they carry over the coding convention of that language to Apex. It's even more chaotic if they haven't used a
-programming language before. They just create their own coding style. This leads to inconsistency and becomes frustrating when you 
-are reading an open source code or a code snippet in a blog post.
+create Force.com applications. This has led to developers using random coding style. If the developer has previously
+worked with another language they carry over the coding convention of that language to Apex. It's even more chaotic 
+if they haven't used a programming language before. They just create their own coding style. This leads to 
+inconsistency and becomes frustrating when you are reading an open source code or a code snippet in a blog post.
 
-The aim of this document is to list a set of coding standards that can be used as a reference when developing applications on the Force.com
-platform. I was a Java developer in my previous life and these standards are heavily influenced by the official Java Coding Convention 
-[http://www.oracle.com/technetwork/java/codeconv-138413.html]. Some of the rules have been copied verbatim from this document.
+The aim of this document is to list a set of coding standards that can be used as a reference when developing 
+applications on the Force.com platform. I was a Java developer in my previous life and these standards are heavily 
+influenced by the official Java Coding Convention [http://www.oracle.com/technetwork/java/codeconv-138413.html]. 
+Some of the rules have been copied verbatim from this document.
 
 Naming Convention
 ------------------
 
   Classes: 
-     As per Object Oriented Programming language rules, class names should be nouns. They should define or describe a thing or entity. 
-     A class name should be camel-case. The first letter of each word in the class name should be capitalized.The class name should be simple
-     and descriptive. Acronyms and abbreviations should be used sparingly and economically to avoid confusion. Do not use underscore or other 
-     special characters in a class name.
-     e.g. Account, RevenueDepartment, MineCraftVehicle
+     As per Object Oriented Programming language rules, class names should be nouns. They should define or describe a 
+     thing or entity. A class name should be camel-case. The first letter of each word in the class name should be 
+     capitalized.The class name should be simple and descriptive. Acronyms and abbreviations should be used sparingly 
+     and economically to avoid confusion. Do not use underscore or other special characters in a class name.
+     e.g. Account, RevenueDepartment, MinecraftVehicle
 
      There a few recommended variations for different types of classes
-        Batch Apex Class: The class name should be suffixed by 'Batch'. e.g. AccountRefundBatch, ValidateOpportunityBatch
-        Controller: The class name is typically suffixed by 'Controller' e.g. SolarEnergyController, NewAccountController
-        Trigger: If you follow the new Trigger 'proto-pattern'[http://bit.ly/cX6VK7], then the main sObject trigger name 
-                 should be suffixed by 'Trigger', and the handler Class should be suffixed by 'TriggerHandler' 
+        Batch Apex Class: The class name should be suffixed by 'Batch'. 
+                          e.g. AccountRefundBatch, ValidateOpportunityBatch
+        Controller: The class name is typically suffixed by 'Controller' 
+                    e.g. SolarEnergyController, NewAccountController
+        Trigger: If you follow the new Trigger 'proto-pattern'[http://bit.ly/cX6VK7], then the main sObject trigger 
+                 name should be suffixed by 'Trigger', and the handler Class should be suffixed by 'TriggerHandler' 
                  e.g. AccountTrigger, AccountTriggerHandler
                  Remember there are more than one Trigger proto-patterns out there[http://bit.ly/owlIZu].
                  Amend your coding style according to the pattern selected.
@@ -44,20 +47,20 @@ Naming Convention
 
   
   Variables: 
-     Variable names should be mixed case with a lowercase first letter and each consecutive word starts with capital letters. This rule applies to
-     instance and class variables. They should not start with an underscore(_), a dollar sign($), even though both are allowed. Infact you should avoid
-     using underscores or special characters in a variable name. Variables names should short yet meaningful. It should indicate the intent of its use. 
-     Avoid single letter variable names like (i, j, k), unless they are used as a throwaway
-     variable in a loop.
+     Variable names should be mixed case with a lowercase first letter and each consecutive word starts with capital 
+     letters. This rule applies to instance and class variables. They should not start with an underscore(_), a 
+     dollar sign($), even though both are allowed. Infact you should avoid using underscores or special characters in 
+     a variable name. Variables names should short yet meaningful. It should indicate the intent of its use. 
+     Avoid single letter variable names like (i, j, k), unless they are used as a throwaway variable in a loop.
 
   Constants:
-     Constants (i.e. variables defined as static final int), are a special type of variable and a constant name should be all uppercase with words
-     seperated by underscores(_). Avoid any special characters in a constant name.
+     Constants (i.e. variables defined as static final int), are a special type of variable and a constant name 
+     should be all uppercase with words seperated by underscores(_). Avoid any special characters in a constant name.
      e.g MIN_WIDTH, UK_CURRENCY
 
   Methods:
-     Method name should be a verb, an action. Like a variable name, it should be mixed case with a lowercase first letter and the first letter of each internal
-     word capitalized.
+     Method name should be a verb, an action. Like a variable name, it should be mixed case with a lowercase first 
+     letter and the first letter of each internal word capitalized.
 
   Documents:
      You should follow the following naming proto-pattern for Documents.
@@ -78,7 +81,8 @@ Force.com developer should format code.
        * Break before an operator
        * Prefer higher-level breaks to lower-level breaks
        * Align the new line with the beginning of the expression at the same level on the previous line.
-       * If the above rules lead to confusing code or to code that's squished up against the right margin, just indent 8 spaces instead. 
+       * If the above rules lead to confusing code or to code that's squished up against the right margin, just 
+         indent 8 spaces instead. 
 
      Here are some examples of breaking method calls:
 
@@ -99,7 +103,8 @@ Force.com developer should format code.
 
      Following are two examples of indenting method declarations. 
      The first is the conventional case. 
-     The second would shift the second and third lines to the far right if it used conventional indentation, so instead it indents only 8 spaces.
+     The second would shift the second and third lines to the far right if it used conventional indentation, so 
+     instead it indents only 8 spaces.
 
          //CONVENTIONAL INDENTATION
          someMethod(int anArg, Object anotherArg, String yetAnotherArg,
@@ -168,7 +173,8 @@ Force.com developer should format code.
 
         for (int i = 0; i < maxLoops; i++) { ... }
 
-    Avoid local declarations that hide declarations at higher levels. For example, do not declare the same variable name in an inner block:
+    Avoid local declarations that hide declarations at higher levels. For example, do not declare the same variable 
+    name in an inner block:
 
         int count;
     ...
