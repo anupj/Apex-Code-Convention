@@ -40,7 +40,7 @@ Naming Convention
                  e.g. AccountTrigger, AccountTriggerHandler
                  Remember there are more than one Trigger proto-patterns out there[http://bit.ly/owlIZu].
                  Amend your coding style according to the pattern selected.
-        Test Classes: A test class should be suffixed by 'Text'. e.g. DebitAccountTest, CreditAccountTest
+        Test Classes: A test class should be suffixed by 'Test'. e.g. DebitAccountTest, CreditAccountTest
 
   Interfaces:
      Interface names follow the same rules as Classes. e.g. Recipe, Coupon
