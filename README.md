@@ -18,5 +18,5 @@ platform. I was a Java developer in my previous life and these standards are hea
 by the official [Java Coding Convention](http://www.oracle.com/technetwork/java/codeconv-138413.html) 
 Some of the rules have been copied verbatim from this document.
 
-Note: If you have any suggestions or improvements, feel free to fork this project, or create an issue, or email me 
+**Note**: If you have any suggestions or improvements, feel free to fork this project, or create an issue, or email me 
       anup[dot]jadhav[at]gmail.com.
