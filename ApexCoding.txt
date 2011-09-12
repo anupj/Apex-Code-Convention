@@ -30,7 +30,7 @@ Naming Convention
      and economically to avoid confusion. Do not use underscore or other special characters in a class name.
      e.g. Account, RevenueDepartment, MinecraftVehicle
 
-     There a few recommended variations for different types of classes
+     There are a few recommended variations for different types of classes
         Batch Apex Class: The class name should be suffixed by 'Batch'. 
                           e.g. AccountRefundBatch, ValidateOpportunityBatch
         Controller: The class name is typically suffixed by 'Controller' 
